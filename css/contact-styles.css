@@ -1,0 +1,30 @@
+/* Styles for my contact page */
+
+/*********************TAG************************/
+body {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(1,1,1,1) 19%, rgba(15,10,4,1) 100%);
+  color: #AF9361;
+}
+
+
+/********************CLASS***********************/
+.form-box {
+  display: inline-block;
+  position: relative;	
+  text-align: left;
+  padding: 10px;  
+}
+
+.cajitas {
+  margin: 5px;	
+}
+
+.info-box {
+  display: inline-block;
+  position: relative;  
+  padding: 20px;
+  border-left: 5px dotted #CDAC43;
+}
+
+/*********************ID*************************/

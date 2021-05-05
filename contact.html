@@ -3,20 +3,32 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Contacto - Licorer&iacute;a Miramar</title>
+		<link rel="stylesheet" href="./css/contact-styles.css">
 	</head>
+	
 	<body>
 		<h1>CONT&Aacute;CTENOS</h1>
-		<form action="mailto:mercadeo@colectivoicaro.com" method="post" enctype="text/plain">
-			<label>Your Name:</label>
-			<input type="text" name="yourName" value="">
+		<div class="form-box">
+		  <form action="mailto:mercadeo@colectivoicaro.com" method="post" enctype="text/plain">
+			<input type="text" name="nombre" value="" placeholder="Nombre*" class="cajitas">
+			<input type="text" name="telefono" value="" placeholder="Telefono*" class="cajitas">
 			<br>
-			<label>Your Email:</label>
-			<input type="email" name="yourEmail" value="">
+			<input type="email" name="correo" value="" placeholder="Email*" class="cajitas">
 			<br>
-			<label>Your Message:</label>
-			<textarea name="yourMessage" rows="10" cols="30" placeholder="Escr&iacute;benos algo, contestaremos ASAP..."></textarea>
+			<textarea name="mensaje" rows="10" cols="30" placeholder="Mensaje*" class="cajitas"></textarea>
 			<br>
-			<input type="submit" name="">
-		</form>
+			<input type="submit" name="" value="Enviar" class="cajitas">
+		  </form>
+		</div> 
+
+		<div class="info-box">
+		  <h3>DIRECCI&Oacute;N</h3>
+		  <p>906 AVE PONCE DE LEON, MIRAMAR
+			<br>SAN JUAN, PR 00909</p>
+		  <h3>E-MAIL</h3>
+		  <p>LICORERIA@COLECTIVOICARO.COM</p>
+		  <h3>TEL&Eacute;FONO</h3>
+		  <p>787-366-7099</p>		
+		</div>
 	</body>
 </html>

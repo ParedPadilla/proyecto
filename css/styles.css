@@ -1,20 +1,20 @@
 /*	styles.css	*/
 /*
-	body {
-		background-color:#eaf6f6;
-	}
 
-	h1, h3 {
-		color:#66bfbf;
-	}
+	Color del background del logo
+	-hex #010101
+	-rgb (1,1,1)
+		Gradiante del logo
+	-hex #0F0A04
+	-rgb (15,10,4)
 	
-	hr {
-		border-style:none;
-		border-top-style:dotted;
-		border-color:grey;
-		border-width:5px;
-		width:5%;
-	}
+	Color del foreground del logo
+	-hex #AF9361
+	-rgb (175,147,97)
+	
+	Color del splash del logo
+	-hex #CDAC43
+	-rgb (205,172,67)
 	
 */
 
@@ -29,27 +29,24 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(180deg, rgba(58,99,81,1) 0%, rgba(57,50,50,1) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(1,1,1,1) 19%, rgba(15,10,4,1) 100%);
+  color: #AF9361;
 }
 
 /* formatear el header */
 header {
-  /*background-color: #3a6351;
-  padding: 30px;
-  background-color: rgb(58,99,81);*/
   text-align: center;
   font-size: 35px;
-  color: #f9f9f9;
+  color: #AF9361;
 }
 
 header img {
-  height: 100%;
+  height: 70%;
   width: 100%;  
 }
 
 section {
-  /*background-color:#e48257;	
-  background-image: linear-gradient(180deg, rgba(58,99,81,1) 0%, rgba(57,50,50,1) 35%, rgba(0,212,255,1) 100%);*/
+
 }
 
 /* para manipular las dos secciones del medio como dos
@@ -57,23 +54,14 @@ section {
 nav {
   float: left;
   width: 30%;
-  /*background: #393232;*/
   padding: 20px;
 }
-
-/* Formatear la lista de navegacion
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-*/
 
 article {
   float: left;
   padding: 20px;
   width: 70%;
-  border-left: 5px dotted #393232;
-  /*background-color: #e48257;*/
+  border-left: 5px dotted #CDAC43;
 }
 
 /*Para separar los estilos de ambas cajas d la seccion*/
@@ -85,10 +73,8 @@ section::after {
 
 /* Style the footer */
 footer {
-/*  background-color: rgb(0,212,255);
-  text-align: center; */
   padding: 10px;
-  color: black;
+  color: #AF9361;
 }
 
 footer ul {
@@ -101,7 +87,7 @@ footer table {
   table-layout: fixed;
   text-align: center;
   left: 75%;
-  border-left: 5px dotted #393232;
+  border-left: 5px dotted #CDAC43;
 }
 
 footer td, footer th {
@@ -109,8 +95,8 @@ footer td, footer th {
   padding-right: 10px;  
 }
 
-footer a {
-  color: #f9f9f9;	
+a {
+  color: #AF9361;	
 }
 
 dt {
@@ -120,22 +106,10 @@ dt {
 hr {
   border-style: none;
   border-top-style: dotted;
-  border-color: #393232;
+  border-color: #CDAC43;
   border-width: 5px;
 }
 
-
-
-/*
----- Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens -->
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-
-*/
 /********************************* Class selectors ******************************/
 
 .dropdown {
@@ -161,7 +135,9 @@ hr {
   border-radius: 10px;  
 }
 
-.dropdown-content a:hover {background-color: #f9f9f9;}
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -176,16 +152,4 @@ hr {
 }
 
 
-
-/*
-.banner {
-  background-image: url("./images/deshiLimas.jpg");
-  background-color: #393232;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-*/
 /********************************** Id selectors ********************************/
