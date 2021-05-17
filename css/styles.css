@@ -20,79 +20,53 @@
 
 /********************************** Tag selectors *******************************/
 
-
-/* para que todos los elementos calculen
-   el height y width de igual manera */
 * {
   box-sizing:border-box;
 }
 
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(90deg, rgba(1,1,1,1) 19%, rgba(15,10,4,1) 100%);
   color: #AF9361;
 }
 
-/* formatear el header */
 header {
-  text-align: center;
-  font-size: 35px;
-  color: #AF9361;
+  border-bottom: 2px solid #AF9361;
 }
 
-header img {
-  height: 70%;
-  width: 100%;  
-}
-
-section {
-
-}
-
-/* para manipular las dos secciones del medio como dos
-	cajas o floats*/
 nav {
-  float: left;
-  width: 30%;
-  padding: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 36.5%;
+}
+
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: double;
+}
+
+nav li:last-child {
+  border-right: none;
+  padding-right: 0;  
+}
+
+nav a, .menu-box a {
+  text-decoration: none;	
 }
 
 article {
   float: left;
   padding: 20px;
   width: 70%;
-  border-left: 5px dotted #CDAC43;
-}
-
-/*Para separar los estilos de ambas cajas d la seccion*/
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  padding: 10px;
-  color: #AF9361;
-}
-
-footer ul {
-  list-style-type: none;
-  padding: 0;		
-}
-
-footer table {
-  position: relative;
-  table-layout: fixed;
-  text-align: center;
-  left: 75%;
-  border-left: 5px dotted #CDAC43;
-}
-
-footer td, footer th {
-  padding-left: 10px;
-  padding-right: 10px;  
+  border-left: 5px dotted #AF9361;
 }
 
 a {
@@ -106,41 +80,50 @@ dt {
 hr {
   border-style: none;
   border-top-style: dotted;
-  border-color: #CDAC43;
+  border-color: #AF9361;
   border-width: 5px;
 }
 
 /********************************* Class selectors ******************************/
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  border-radius: 10px;
-  position: absolute;
-  background-color: #3a6351;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.header-container {
   display: block;
-  border-radius: 10px;  
+  height: 355px;
+  text-align: right;
+  font-size: 1em;
+  color: #AF9361;
+  margin-bottom: 40px;
+  background-image: url("https://media-exp1.licdn.com/dms/image/C4D1BAQHlYAbip0w0uQ/company-background_10000/0/1529440008339?e=2159024400&v=beta&t=Pjl8Xrp6RxAupJLatlGnj47qLTSwvV0HNPwgyQzCbX8");    
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1216px 346.188px;
 }
 
-.dropdown-content a:hover {
-  background-color: #f9f9f9;
+.nav-container {
+  display: flex;  
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.content-container {
+  width: 60%;
+  margin: auto;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.8);
+  background: linear-gradient(80deg, rgba(34,34,34,.8) 19%, rgba(15,10,4,1) 90%);
+  color: #AF9361;
+  display: block;	
+  border-top: 2px solid #AF9361;
+  padding-top: 40px;
+}
+
+.wrapper {
+  max-width: 1310px;	
+}
+
+.center {
+  text-align: center;	
 }
 
 .fade {
@@ -151,5 +134,58 @@ hr {
   opacity: 1.0;
 }
 
+.logo-box {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 20%;
+}
 
-/********************************** Id selectors ********************************/
+.info-box {
+  display: inline-block;
+  position: relative;
+  left: 33%;
+  text-align: center;
+}
+
+.menu-box {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  margin-left: 6%;
+  width: 20%;  
+}
+
+.diligence {
+  font-size: .8em;
+  text-align: right; 
+}
+
+.fotos {
+  max-width: -webkit-fill-available;
+  max-width: moz-available;
+  max-width: fill-available;
+}
+
+.half-left-side {
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.half-right-side {
+  display: inline-block;
+  padding-left: 50px;	
+}
+
+/********************************** FORMS ********************************/
+
+.form-box {
+  display: inline-block;
+  position: relative;	
+  text-align: left;
+  padding: 10px;  
+}
+
+.cajitas {
+  margin: 5px;	
+}
