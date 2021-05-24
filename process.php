@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<!-- mobile setting -->
-		<title>Licorer&iacute;a Miramar | Know Us</title>
+		<title>Licorer&iacute;a Miramar | Register</title>
 		<link rel="stylesheet" href="./css/styles.css">
 	</head>
-	<body>
 	
+	<body>
 	  <header>
 	  <div class="header-container">
 		<div class="wrapper">
@@ -29,26 +29,35 @@
 	  
 	  <div class="content-container">
 	    <div class="wrapper">
-		  <section>
 		    <br><br>
-		    <img class="fotos" src="./images/deshiLimas.jpg" alt="una obra de arte">
-		    <hr>
-			<h2>MISI&Oacute;N</h2>
-			<p>Licorería Miramar es el primer proyecto gastron&oacute;mico en Puerto Rico y el Caribe dedicado a la investigaci&oacute;n y la creaci&oacute;n de valores gastron&oacute;micos, enfocados en la cocteler&iacute;a.</p>
-			<p>Nuestra misi&oacute;n es desarrollar soluciones para la industria hospitalaria y gastron&oacute;mica, a la vez que creamos experiencias y damos forma al c&oacute;mo y qu&eacute; las personas consumen.</p>
-			<hr>
-		    <img class="fotos" src="./images/joseito.jpg" alt="un empleado ahi">
-			<hr>
-			<!--<img class="fotos" src="./images/chris.jpg" alt="otro empleado">
-			<hr>-->
-			<h2>VISI&Oacute;N</h2>
-			<p>Elevar el nombre de Puerto Rico como uno de los pioneros en el desarrollo de la cocteler&iacute;a en el Caribe, y mantenernos relevantes a nivel mundial.</p>		
-			<hr>	
-		    <img class="fotos" src="./images/me.jpg" alt="otro empleado ahi">
-			<!--<hr>
-			<img class="fotos" src="./images/chuck.jpg" alt="boss empleado">-->
-		    <br><br>
-		</section>
+		    <?php
+			
+			  //Traemos los datos del form
+			  extract($_POST);			  
+
+			  //Coneccion con MySQL
+			  $conn = new mysqli("127.0.0.1", "root", "", "licodb", 3306);
+			  
+			  if($conn->connect_errno) {
+				  echo "Failed to connect: (" . $conn->connect_errno . ")";
+				  exit;
+			  }
+			  			  
+			  //Construir query
+			  $query = "INSERT INTO cliente(user_pk, nombre, inicial, apellido1, apellido2, negocio, direccion, pueblo, zip_code, telefono, correo1, correo2, passwd, servicio) VALUES ('$user', '$nombre', '$inicial', '$apellido1', '$apellido2', '$negocio', '$direccion', '$pueblo', '$zipcode', '$telefono', '$correo1', '$correo2', '$passwd1', '$servicio');";
+			  trim($query);
+			  $query = stripslashes($query);
+			  
+			  //Ejecutar query
+			  if(!$conn->query($query)) {
+				  echo "The query cannot be executed: " . $conn->connect_errno;
+			  }	
+			  else
+				  echo "Record succesfully entered for: " . $nombre . " " . $apellido1 . ".";
+			  
+			  echo "<h3><a href=\"register.html\">Volver al Formulario</a></h3>";
+			  echo "<h3><a href=\"index.html\">Volver al Inicio</a></h3>";
+			?>
 		</div><!--wrapper-->
 	  </div><!--content-container-->
 	  
@@ -65,7 +74,7 @@
 		    <h3>E-MAIL</h3>
 		    <p><a href="mailto:licoreria.miramar@colectivoicaro.com">LICORERIA.MIRAMAR@COLECTIVOICARO.COM</a></p>
 		    <h3>TEL&Eacute;FONO</h3>
-		    <p><a href="tel:+17873667099">787-366-7099</a></p>	
+		    <p><a href="tel:+17873667099">787-366-7099</a></p>		
 		  </div><!--info-box-->
 		  <div class="menu-box">
 		    <h3>SITE MAP</h3>
@@ -83,16 +92,5 @@
 	    </div><!--wrapper-->
 	  </div><!--footer-container-->
 	  </footer>
-
 	</body>
 </html>	
-
-<!--
-		<section>
-		  <img src="./images/joseito.jpg" alt="un empleado ahi">
-		  <br><br>	
-		  <img src="./images/me.jpg" alt="otro empleado ahi">
-		  <br><br>
-		  <img src="./images/deshiLimas.jpg" alt="una obra de arte">
-		</section>
--->

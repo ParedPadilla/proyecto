@@ -77,6 +77,16 @@ dt {
   font-weight: bold;
 }
 
+th ,td {
+  padding: 1em;	
+  border-bottom: solid 1px;
+  border-color: #AF9361;
+}
+
+th {
+  border-right: solid 1px;	
+}
+
 hr {
   border-style: none;
   border-top-style: dotted;
@@ -175,6 +185,10 @@ hr {
 .half-right-side {
   display: inline-block;
   padding-left: 50px;	
+}
+
+.last {
+  border-bottom: none;	
 }
 
 /********************************** FORMS ********************************/

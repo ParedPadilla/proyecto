@@ -1,0 +1,17 @@
+/* Styles for my forms page */
+
+/*********************TAG************************/
+
+/********************CLASS***********************/
+.form-box {
+  display: inline-block;
+  position: relative;	
+  text-align: left;
+  padding: 10px;  
+}
+
+.cajitas {
+  margin: 5px;	
+}
+
+/*********************ID*************************/

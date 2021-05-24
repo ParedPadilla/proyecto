@@ -21,6 +21,7 @@
 			    <li class="fade"><a href="services.html">SERVICIOS</a></li>
 				<li class="fade"><a href="contact.html">CONTACTANOS</a></li>
 				<li class="fade"><a href="register.html">REG&Iacute;STRATE</a></li>
+				<li class="fade"><a href="presentacion.html">PRESENTACI&Oacute;N</a></li>
 			  </ul>
 			</nav>
 		  </div><!--nav-container-->
@@ -31,21 +32,30 @@
 	  <div class="content-container">
 	    <div class="wrapper">
 		<h1 class="center">REG&Iacute;STRESE</h1>
+		<p class="center"><a href="report.php">REPORTE</a></p>
 			<div class="form-box">
 			  <p>Campos marcados (*) son Requeridos</p>
-			  <form action="" method="" enctype="text/plain">
+			  <form action="process.php" method="post" id="registro">
 			    <section class="half-left-side">
-				  <input type="text" id="nombre" name="nombre" placeholder="Nombre*" class="cajitas" size="30">
+				  <input type="text" id="user" name="user" placeholder="Nombre de Usuario*" class="cajitas" size="25">
 				  <br>
-				  <input type="text" id="inicial" name="inicial" placeholder="Inicial" class="cajitas" size="2" maxlength="2">
+				  <input type="text" id="nombre" name="nombre" placeholder="Nombre*" class="cajitas" size="15">
 				  <br>
-				  <input type="text" id="apellido1" name="apellido1" placeholder="Apellido*" class="cajitas" size="30">
+				  <input type="text" id="inicial" name="inicial" placeholder="Inicial" class="cajitas" size="1" maxlength="2">
 				  <br>
-				  <input type="text" id="apellido2" name="apellido2" placeholder="Segundo Apellido" class="cajitas" size="30">
+				  <input type="text" id="apellido1" name="apellido1" placeholder="Apellido*" class="cajitas" size="20">
 				  <br>
-				  <input type="text" id="negocio" name="negocio" placeholder="Negocio que Representa*" class="cajitas" size="25">
+				  <input type="text" id="apellido2" name="apellido2" placeholder="Segundo Apellido" class="cajitas" size="20">
 				  <br>
-				  <input type="text" id="telefono" name="telefono" placeholder="Telefono*" class="cajitas" size="12">
+				  <input type="text" id="negocio" name="negocio" placeholder="Negocio que Representa*" class="cajitas" size="20">
+				  <br>
+				  <input type="text" id="direccion" name="direccion" placeholder="Direccion de Negocio*" class="cajitas" size="30">
+				  <br>
+				  <input type="text" id="pueblo" name="pueblo" placeholder="Pueblo*" class="cajitas" size="15">
+				  <br>
+				  <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code*" class="cajitas" size="10">
+				  <br>
+				  <input type="tel" id="telefono" name="telefono" placeholder="Telefono*" class="cajitas" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="15">
 				  <br>
 				  <input type="email" id="correo1" name="correo1" placeholder="Email*" class="cajitas">
 				  <br>
@@ -57,16 +67,16 @@
 				</section>
 				
 				<section class="half-right-side">
-				  <input type="radio" id="prep" name="servicio" value="prep">
+				  <input type="radio" name="servicio" value="prep" checked>
 				  <label>Prep</label>
 				  <br>
-				  <input type="radio" id="hielo" name="servicio" value="hielo">
-				  <label>Solo Hielo</label>
+				  <input type="radio" name="servicio" value="hielo">
+				  <label>Hielo</label>
 				  <br>
-				  <input type="radio" id="manejo" name="servicio" value="manejo">
+				  <input type="radio" name="servicio" value="manejo">
 				  <label>Manejo</label>
 				  <br>
-				  <input type="radio" id="consultoria" name="servicio" value="consultoria">
+				  <input type="radio" name="servicio" value="consultoria">
 				  <label>Consultor&iacute;a</label>
 				  <br>
 				  <input type="submit" name="" value="Enviar" class="cajitas">
